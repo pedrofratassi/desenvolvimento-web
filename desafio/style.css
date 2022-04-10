@@ -15,6 +15,8 @@
     --cor8: red;
     --cor9: #1A93D9;
     --cor10: #d3d3d3;
+    --cor11: #10E6C1;
+    --cor12: #00000080;
 
 
     --fonte-padrao:'Roboto Slab', serif;
@@ -45,6 +47,15 @@ header{
     justify-content: space-around;
     position: fixed;
     z-index: 99;
+}
+
+a{
+    color: var(--cor3);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--cor11);
 }
 
 .logo{
@@ -101,7 +112,7 @@ header{
 .icons ion-icon{
     padding: 30px 0;
     font-size: 2em;
-    color: #FFFFFF;
+    color: var(--cor3);
     transition: 0.5s ease;
 }
 
@@ -290,6 +301,11 @@ section#portifolio > .curriculo .card > p{
     text-align: justify;
 }
 
+section#portifolio > .curriculo .card > a{
+    color: white;
+    text-decoration: none;
+}
+
 section#portifolio > .curriculo .card > button{
     position: absolute;
     z-index: 9;
@@ -334,3 +350,106 @@ section#portifolio > .curriculo .cards{
 }
 
 /* Contato */
+section#contato .agenda{
+    width: 100%;
+    height: 100vh;
+    background: url('imagens/banner_03.png');
+    background-size: cover;
+}
+
+section#contato .agenda > .content-contato{
+    width: 80%;
+    height: 60vh;
+    margin: 0 auto;
+    padding: 200px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+section#contato .content-contato > .contato-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: var(--cor3);
+}
+
+section#contato .content-contato > .contato-left > h1{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+section#contato .content-contato .linha{
+    width: 350px;
+    height: 3px;
+    background: var(--cor3);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+section#contato .content-contato > .contato-left > ion-icon{
+    font-size: 2em;
+    padding: 20px 0;
+}
+
+section#contato .content-contato > .contato-left > span{
+    font-size: 1.2em;
+    padding: 5px 0;
+}
+
+section#contato .content-contato > .contato-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: var(--cor3);
+}
+
+section#contato .content-contato > .contato-right > h1{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+
+section#contato .content-contato > .contato-right > input[type=email],
+section#contato .content-contato > .contato-right > input[type=text]{
+    border-radius: 20px;
+    border: none;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    outline: none;
+}
+     
+section#contato .content-contato > .contato-right > textarea{
+    width: 100%;
+    height: 120px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    outline: none;
+    padding: 15px 20px;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 80px;
+    color: var(--cor3);
+    line-height: 80px;
+    text-align: center;
+    background-color: var(--cor12);
+    position: relative;
+    top: -80px;
+}
+
+/* Resposividade */
+
+@media screen and (max-width: 1280px){
+    .icons ion-icon{
+        font-size: 1.5em;
+    }
+}
